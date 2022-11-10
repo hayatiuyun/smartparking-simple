@@ -1,0 +1,60 @@
+<div class="main-container">
+    <div class="image-main-container">
+        <div class="image-container">
+            <img class="img-section"
+                src="https://img.freepik.com/free-photo/top-view-electric-cars-parking-lot_23-2148972403.jpg?w=1060&t=st=1668107699~exp=1668108299~hmac=27b6779845761e73277e2b331bca9bce509c2ae58c173fdb2b3766b8a3097421" />
+        </div>
+    </div>
+    <div class="data-main-container">
+        <div class="data-caption-container"><span class="caption">Latest status parking lot</span>
+            <div class="data-status-card"><span class="value-card">{{car}}</span></div>
+        </div>
+        <div class="btn-container">
+            {{!-- <button type="button" class="btn" id="gate-btn" data-gate={{garage}}>
+                {{#if garage}}
+                <span class="e42_18">Tutup Gerbang</span>
+                {{else}}
+                <span class="e42_18">Buka Gerbang</span>
+                {{/if}}
+            </button> --}}
+
+            {{#if garage}}
+            <button type="button" class="btn close" id="gate-btn" data-gate={{garage}}>
+                <span class="e42_18" id="caption-btn">Tutup Gerbang</span>
+            </button>
+            {{else}}
+            <button type="button" class="btn open" id="gate-btn" data-gate={{garage}}>
+                <span class="e42_18" id="caption-btn">Buka Gerbang</span>
+            </button>
+            {{/if}}
+            <span class="caption">Klik untuk membuka/menutup gerbang</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById('gate-btn')
+    const onClicked = () => {
+        const garage = btn.getAttribute("data-gate")
+        const captionBtn = document.getElementById('caption-btn')
+        const gateStatus = garage === '0' ? 1 : 0
+
+        if (btn.classList.contains('open')) {
+            btn.classList.remove('open')
+            btn.classList.add('close')
+            captionBtn.innerText = 'Tutup Gerbang'
+        } else {
+            btn.classList.remove('close')
+            btn.classList.add('open')
+            captionBtn.innerText = 'Buka Gerbang'
+        }
+        let body = { garage: gateStatus }
+        fetch(`/postData`, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        })
+
+    }
+    btn.addEventListener("click", onClicked);
+</script>

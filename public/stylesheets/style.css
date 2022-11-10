@@ -1,0 +1,131 @@
+body {
+  font: 14px 'Inter', sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.main-container { 
+	background-color:rgba(245.00000059604645, 245.00000059604645, 245.00000059604645, 1);
+	width:100%;
+	height:95vh;
+  display: flex;
+  flex-direction: row;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  gap: 24px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.image-main-container { 
+	width:30%;
+  display: flex;
+  align-self: stretch;
+  border-radius: 12px;
+}
+.image-container {
+	background-repeat:no-repeat;
+  overflow: hidden;
+	background-size:cover;
+  border-radius: 24px;
+}
+.img-section {
+  height: 100%;
+}
+.data-main-container { 
+  width: 489px;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-self: stretch;
+}
+.data-caption-container { 
+	width:465px;
+	height:100%;
+  display: flex;
+  flex-direction: column;
+  gap:24px;
+  border-radius: 24px;
+}
+.caption { 
+	color:rgba(0, 0, 0, 1);
+	width:100%;
+	font-family:Inter;
+	text-align:center;
+	font-size:16px;
+	letter-spacing:0;
+}
+.data-status-card { 
+	background-color:rgba(255, 255, 255, 1);
+	width:100%;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  display: flex;
+  align-content: center;
+  border-top-left-radius:12px;
+	border-top-right-radius:12px;
+	border-bottom-left-radius:12px;
+	border-bottom-right-radius:12px;
+}
+.value-card { 
+	color:rgba(0, 0, 0, 1);
+	width:100%;
+	height:100%;
+	font-family:Inter;
+	text-align:center;
+  font-weight: bold;
+	font-size:36px;
+	letter-spacing:0;
+}
+.btn-container { 
+	width:465px;
+	height:100%;
+  display: flex;
+  align-content: center;
+  gap:16px;
+  align-items:center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.btn { 
+	background-color:rgba(236.00000113248825, 208.0000028014183, 65.0000037252903, 1);
+	width:383px;
+	height:77px;
+  border: 0;
+  cursor: pointer;
+	box-shadow:0px 8px 36px rgba(0, 0, 0, 0.10000000149011612);
+	border-top-left-radius:12px;
+	border-top-right-radius:12px;
+	border-bottom-left-radius:12px;
+	border-bottom-right-radius:12px;
+}
+.open {
+	background-color:rgba(236.00000113248825, 208.0000028014183, 65.0000037252903, 1) !important;
+}
+.close {
+  background-color: #F75858 !important;
+}
+.btn:hover {
+  background-color: #12E37E;
+}
+.e42_18 { 
+	color:rgba(0, 0, 0, 1);
+	width:161px;
+	height:29px;
+	font-family:Inter;
+	text-align:center;
+	font-size:24px;
+	letter-spacing:0;
+}
+.e42_19 { 
+	color:rgba(0, 0, 0, 1);
+	width:293px;
+	height:19px;
+	font-family:Inter;
+	text-align:center;
+	font-size:16px;
+	letter-spacing:0;
+}
