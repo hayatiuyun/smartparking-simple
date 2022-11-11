@@ -8,23 +8,9 @@ router.get("/", async function (req, res, next) {
     process.env.deviceNameGarage
   );
   const data = {
-    car: dataCar.car,
-    garage: dataGarage.garage,
+    car: dataCar.car === 0 ? "Terisi" : "Kosong",
+    garage: dataGarage.garasi,
   };
-
-  if (dataCar.car === 0) {
-    data.car = "Terisi";
-  } else if (dataCar.car === 1) {
-    data.car = "Kosong";
-  } else {
-    data.car = "Tidak ada parkir";
-  }
-
-  if (dataGarage.garage === 1) {
-    data.garage === true;
-  } else {
-    data.garage === false;
-  }
 
   res.render("index", { title: "Express", ...data });
 });

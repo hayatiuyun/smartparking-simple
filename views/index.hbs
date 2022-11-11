@@ -10,14 +10,6 @@
             <div class="data-status-card"><span class="value-card">{{car}}</span></div>
         </div>
         <div class="btn-container">
-            {{!-- <button type="button" class="btn" id="gate-btn" data-gate={{garage}}>
-                {{#if garage}}
-                <span class="e42_18">Tutup Gerbang</span>
-                {{else}}
-                <span class="e42_18">Buka Gerbang</span>
-                {{/if}}
-            </button> --}}
-
             {{#if garage}}
             <button type="button" class="btn close" id="gate-btn" data-gate={{garage}}>
                 <span class="e42_18" id="caption-btn">Tutup Gerbang</span>
@@ -48,7 +40,7 @@
             btn.classList.add('open')
             captionBtn.innerText = 'Buka Gerbang'
         }
-        let body = { garage: gateStatus }
+        let body = { garasi: gateStatus }
         fetch(`/postData`, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
