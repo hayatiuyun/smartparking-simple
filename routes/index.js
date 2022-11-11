@@ -7,8 +7,9 @@ router.get("/", async function (req, res, next) {
   const dataGarage = await antaresApi.getLatestData(
     process.env.deviceNameGarage
   );
+  console.log(dataCar, dataGarage)
   const data = {
-    car: dataCar.car === 0 ? "Terisi" : "Kosong",
+    car: dataCar.car === 0 ? "Kosong" : "Terisi",
     garage: dataGarage.garasi,
   };
 
